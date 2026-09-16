@@ -1,0 +1,4 @@
+contract/
+graphify-out/
+.zcode/
+node_modules/
