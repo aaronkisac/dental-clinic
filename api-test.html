@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Test — Dentaliva Chatbot API</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0c1f38; --gold: #c9a35c; --gold-soft: #e6cfa0; --gold-deep: #a8823d;
+      --ivory: #faf7f2; --ink: #2a3648; --muted: #6b7686;
+      --line: rgba(201,163,92,.35); --line-soft: rgba(12,31,56,.1);
+      --ok: #1e7d4f; --err: #b3403a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 1.7; color: var(--ink); background: var(--ivory); padding: 48px 24px; }
+    .wrap { max-width: 980px; margin: 0 auto; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: 38px; color: var(--navy); margin-bottom: 6px; }
+    .sub { color: var(--muted); margin-bottom: 36px; }
+    .sub code { background: #fff; border: 1px solid var(--line-soft); padding: 2px 8px; font-size: 13px; }
+    .card { background: #fff; border: 1px solid var(--line-soft); margin-bottom: 22px; }
+    .card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 22px; border-bottom: 1px solid var(--line-soft); flex-wrap: wrap; }
+    .card__head b { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--navy); }
+    .method { font-size: 10.5px; font-weight: 700; letter-spacing: .16em; border: 1px solid var(--line); color: var(--gold-deep); padding: 4px 10px; }
+    .method--post { border-color: var(--navy); color: var(--navy); }
+    .status { font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+    .status--ok { color: var(--ok); } .status--err { color: var(--err); } .status--wait { color: var(--muted); }
+    pre { margin: 0; padding: 18px 22px; overflow: auto; max-height: 320px; background: #fbf5ea; font-size: 12.5px; line-height: 1.6; color: #33415c; }
+    .btn { display: inline-block; margin-top: 4px; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; border: 1px solid var(--gold); color: var(--gold-deep); background: none; padding: 10px 22px; cursor: pointer; }
+    .btn:hover { background: var(--gold); color: #fff; }
+    .note { border: 1px solid var(--line); background: #fff; padding: 18px 22px; font-size: 13.5px; color: var(--muted); }
+    .note b { color: var(--navy); }
+    .note code { background: var(--ivory); padding: 1px 6px; font-size: 12.5px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Dentaliva Chatbot API — Test</h1>
+    <p class="sub">Base: <code>https://aaronkisac.github.io/dental-clinic</code> · Tüm GET uçları CORS açık. Ayrıntı: <code>API.md</code></p>
+
+    <div id="endpoints"></div>
+
+    <div class="note">
+      <b>Randevu (POST) notu:</b> GitHub Pages statiktir; POST burada çalışmaz.
+      Demo yanıtı <code>api/appointments/demo-response.json</code> içinde sabittir,
+      gerçek uç için <code>serverless/appointments.js</code> dosyasını Netlify'a deploy edin
+      (<code>DEMO_MODE=false</code> ile canlı kayıt).
+    </div>
+    <button class="btn" onclick="loadAll()">↻ Yeniden test et</button>
+  </div>
+
+  <script>
+    const BASE = "https://aaronkisac.github.io/dental-clinic";
+    const ENDPOINTS = [
+      { path: "/api/clinic.json",      label: "Klinik Bilgileri",  method: "GET" },
+      { path: "/api/services.json",    label: "Hizmetler",         method: "GET" },
+      { path: "/api/doctors.json",     label: "Hekimler",          method: "GET" },
+      { path: "/api/faq.json",         label: "SSS",               method: "GET" },
+      { path: "/api/slots.json",       label: "Müsait Slotlar",    method: "GET" },
+      { path: "/api/appointments/schema.json",    label: "Randevu Şeması (gövde sözleşmesi)", method: "GET" },
+      { path: "/api/appointments/demo-response.json", label: "Randevu Demo Yanıtı (POST sabiti)", method: "POST" },
+    ];
+
+    const wrap = document.getElementById("endpoints");
+    wrap.innerHTML = ENDPOINTS.map((e, i) => `
+      <div class="card">
+        <div class="card__head">
+          <b>${e.label}</b>
+          <span><span class="method ${e.method === "POST" ? "method--post" : ""}">${e.method}</span>
+          <span class="status status--wait" id="st-${i}">…</span></span>
+        </div>
+        <pre id="out-${i}">yükleniyor…</pre>
+      </div>`).join("");
+
+    async function loadAll() {
+      ENDPOINTS.forEach(async (e, i) => {
+        const st = document.getElementById("st-" + i);
+        const out = document.getElementById("out-" + i);
+        st.className = "status status--wait"; st.textContent = "…";
+        out.textContent = "yükleniyor…";
+        try {
+          const res = await fetch(BASE + e.path);
+          const data = await res.json();
+          st.className = "status " + (res.ok ? "status--ok" : "status--err");
+          st.textContent = "HTTP " + res.status;
+          out.textContent = JSON.stringify(data, null, 2);
+        } catch (err) {
+          st.className = "status status--err"; st.textContent = "HATA";
+          out.textContent = String(err);
+        }
+      });
+    }
+    loadAll();
+  </script>
+</body>
+</html>

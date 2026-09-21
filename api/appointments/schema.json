@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dentaliva Randevu Talebi",
+  "description": "Chatbot, randevu oluştururken bu şemaya göre JSON gövde gönderir. Demo kurulumunda yanıt api/appointments/demo-response.json içindeki gibi döner.",
+  "type": "object",
+  "required": ["full_name", "phone", "service_id"],
+  "properties": {
+    "full_name": { "type": "string", "minLength": 3, "examples": ["Ayşe Yılmaz"] },
+    "phone": { "type": "string", "pattern": "^[+0][0-9 ()-]{9,17}$", "examples": ["+905321112233"] },
+    "email": { "type": "string", "format": "email", "examples": ["ayse@ornek.com"] },
+    "service_id": { "type": "string", "enum": ["hollywood-smile", "implant", "ortodonti", "dis-beyazlatma", "zirkonyum", "laminate-veneer", "all-on-four-six", "genel-muayene"] },
+    "preferred_date": { "type": "string", "format": "date", "examples": ["2026-09-22"] },
+    "preferred_slot": { "type": "string", "pattern": "^[0-9]{2}:[0-9]{2}$", "examples": ["10:30"] },
+    "note": { "type": "string", "maxLength": 500 },
+    "source": { "type": "string", "examples": ["chatbot", "web-form", "whatsapp"] },
+    "language": { "type": "string", "enum": ["tr", "en"], "default": "tr" }
+  }
+}

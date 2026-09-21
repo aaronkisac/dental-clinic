@@ -1,0 +1,34 @@
+{
+  "updated": "2026-09-20",
+  "count": 4,
+  "doctors": [
+    {
+      "id": "emel-hoca",
+      "name": "Emel Hoca",
+      "role": { "tr": "Diş Hekimi", "en": "Dentist" },
+      "rating": 5.0,
+      "photo": "https://www.dentaliva.com/wp-content/uploads/2025/06/emel-hoca-web-819x1024.webp"
+    },
+    {
+      "id": "yucel-hoca",
+      "name": "Yücel Hoca",
+      "role": { "tr": "Diş Hekimi", "en": "Dentist" },
+      "rating": 5.0,
+      "photo": "https://www.dentaliva.com/wp-content/uploads/2025/06/yucel-hoca-web-819x1024.webp"
+    },
+    {
+      "id": "hacer-kazanci",
+      "name": "Hacer Kazancı",
+      "role": { "tr": "Diş Hekimi", "en": "Dentist" },
+      "rating": 5.0,
+      "photo": "https://www.dentaliva.com/wp-content/uploads/2025/07/web-hacer-kazanci-819x1024.jpg"
+    },
+    {
+      "id": "kadir-hoca",
+      "name": "Kadir Hoca",
+      "role": { "tr": "Diş Hekimi", "en": "Dentist" },
+      "rating": 5.0,
+      "photo": "https://www.dentaliva.com/wp-content/uploads/2025/06/kadir-hoca-web-site-2-819x1024.webp"
+    }
+  ]
+}

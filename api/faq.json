@@ -1,0 +1,46 @@
+{
+  "updated": "2026-09-20",
+  "count": 5,
+  "faq": [
+    {
+      "id": "beyazlatma-yontemleri",
+      "question": { "tr": "Diş beyazlatma yöntemleri nelerdir?", "en": "What are the teeth whitening methods?" },
+      "answer": {
+        "tr": "İki ana yöntem vardır: ev tipi (hasta tarafından haftalar süren) ve ofis tipi (klinikte yaklaşık 1 saatte tamamlanan). Size uygun olan muayene sonrası belirlenir.",
+        "en": "Two main methods: take-home (patient-applied over weeks) and in-office (~1 hour at the clinic). The right one is decided after examination."
+      }
+    },
+    {
+      "id": "dis-eti-hastaliklari",
+      "question": { "tr": "Diş eti hastalıkları neden oluşur?", "en": "What causes gum disease?" },
+      "answer": {
+        "tr": "Genetik yatkınlık, hormonal değişimler, yanlış fırçalama ve ağız bakımı eksikliği başlıca etkenlerdir. Kanama, kızarıklık, şişlikte erken tedavi çoğu zaman cerrahi gerektirmez.",
+        "en": "Genetic predisposition, hormonal changes, improper brushing and poor oral hygiene. Early treatment usually doesn't require surgery."
+      }
+    },
+    {
+      "id": "dis-tasi",
+      "question": { "tr": "Diş taşı neden oluşur, nasıl temizlenir?", "en": "Why does tartar form and how is it removed?" },
+      "answer": {
+        "tr": "Yeterince fırçalanmayan bölgelerde biriken plak sertleşip diş taşına dönüşür. Kliniğimizde ultrasonik cihazlarla ağrısız temizlenir.",
+        "en": "Plaque in under-brushed areas hardens into tartar. It is removed painlessly with ultrasonic devices at our clinic."
+      }
+    },
+    {
+      "id": "ortodonti-yas",
+      "question": { "tr": "Ortodontik tedavi hangi yaşlarda uygulanabilir?", "en": "At what ages can orthodontic treatment be applied?" },
+      "answer": {
+        "tr": "Günümüzde ortodontik tedaviye yaş sınırı yoktur; çocuklarda ve yetişkinlerde durum değerlendirmesi sonrası uygulanır.",
+        "en": "There is no age limit today; it is applied to children and adults after assessment."
+      }
+    },
+    {
+      "id": "implant-kron",
+      "question": { "tr": "İmplant üstü kron hangi malzemeden yapılır?", "en": "What material is used for implant crowns?" },
+      "answer": {
+        "tr": "İmplant markasına göre zirkonyum veya metal destekli porselen kronlar tercih edilir; estetik bölgede genellikle zirkonyum önerilir.",
+        "en": "Depending on the implant brand, zirconia or metal-supported porcelain crowns; zirconia is usually recommended in aesthetic zones."
+      }
+    }
+  ]
+}

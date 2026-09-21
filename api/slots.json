@@ -1,0 +1,18 @@
+{
+  "updated": "2026-09-20",
+  "timezone": "Europe/Istanbul",
+  "note": {
+    "tr": "Demo müsait slot verisi. Chatbot bu listeyi okuyarak hasta için tarih/saat önerebilir.",
+    "en": "Demo slot data. The chatbot can read this list to offer date/time options to the patient."
+  },
+  "slot_minutes": 30,
+  "days": [
+    { "date": "2026-09-21", "weekday": "Pazartesi", "slots": ["09:30", "10:00", "11:30", "14:00", "16:30", "19:00"] },
+    { "date": "2026-09-22", "weekday": "Salı", "slots": ["09:00", "10:30", "13:00", "15:30", "17:00", "20:30"] },
+    { "date": "2026-09-23", "weekday": "Çarşamba", "slots": ["09:30", "12:00", "14:30", "16:00", "18:30"] },
+    { "date": "2026-09-24", "weekday": "Perşembe", "slots": ["10:00", "11:00", "13:30", "15:00", "17:30", "19:30"] },
+    { "date": "2026-09-25", "weekday": "Cuma", "slots": ["09:00", "09:30", "11:00", "14:00", "16:00", "18:00", "21:00"] },
+    { "date": "2026-09-26", "weekday": "Cumartesi", "slots": ["10:30", "12:30", "15:00", "17:00"] },
+    { "date": "2026-09-27", "weekday": "Pazar", "slots": ["11:00", "13:00", "15:00", "17:00", "19:00"] }
+  ]
+}

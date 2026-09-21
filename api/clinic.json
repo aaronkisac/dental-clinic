@@ -1,0 +1,19 @@
+{
+  "name": "Dentaliva Diş Kliniği",
+  "city": "İstanbul",
+  "district": "Bağcılar",
+  "phone": "+905464556455",
+  "phone_display": "0 (546) 455 6 455",
+  "email": "smildentaliva@gmail.com",
+  "whatsapp": "+905464556455",
+  "address": "Bağcılar / İstanbul",
+  "map_url": "https://www.google.com/maps/search/Dentaliva+Di%C5%9F+Klini%C4%9Fi+Ba%C4%9Fc%C4%B1lar",
+  "hours": {
+    "monday_saturday": "09:00 - 22:00",
+    "sunday": "10:00 - 20:00"
+  },
+  "google_rating": 5.0,
+  "established_year": 2012,
+  "supported_languages": ["tr", "en"],
+  "website": "https://aaronkisac.github.io/dental-clinic/"
+}

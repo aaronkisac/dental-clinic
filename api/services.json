@@ -1,0 +1,83 @@
+{
+  "updated": "2026-09-20",
+  "count": 7,
+  "services": [
+    {
+      "id": "hollywood-smile",
+      "name": { "tr": "Hollywood Smile", "en": "Hollywood Smile" },
+      "description": {
+        "tr": "Yüz hatlarınıza ve dudak hattınıza göre planlanan estetik gülüş tasarımı.",
+        "en": "Aesthetic smile design planned around your facial features and lip line."
+      },
+      "duration_days": "4-6",
+      "tags": ["estetik-planlama", "yüze-özel-tasarım", "doğal-sonuç"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/HOLLYWOOD-SMILE-2.png"
+    },
+    {
+      "id": "implant",
+      "name": { "tr": "İmplant Tedavisi", "en": "Dental Implants" },
+      "description": {
+        "tr": "Eksik dişlerin yerine titanyum implantlar; kalıcı ve doğal görünümlü çözüm.",
+        "en": "Titanium implants for missing teeth; a lasting, natural-looking solution."
+      },
+      "duration_days": "90-120",
+      "tags": ["all-on-four", "all-on-six", "kalıcı-çözüm"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/IMPLANT-TEDAVISI.png"
+    },
+    {
+      "id": "ortodonti",
+      "name": { "tr": "Ortodonti", "en": "Orthodontics" },
+      "description": {
+        "tr": "Tel veya şeffaf plak tedavisiyle her yaşta düzgün diş dizilimi.",
+        "en": "Braces or clear aligners for straight teeth at any age."
+      },
+      "duration_days": "180-540",
+      "tags": ["tel-tedavisi", "şeffaf-plak", "her-yaş"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/ORTODONTI.png"
+    },
+    {
+      "id": "dis-beyazlatma",
+      "name": { "tr": "Diş Beyazlatma", "en": "Teeth Whitening" },
+      "description": {
+        "tr": "Ofis tipi (klinikte ~1 saat) veya ev tipi beyazlatma; mineye zarar vermez.",
+        "en": "In-office (~1 hour) or take-home whitening; enamel-safe."
+      },
+      "duration_days": "1",
+      "tags": ["ofis-tipi", "ev-tipi", "mine-dostu"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/DIS%E2%95%A0g-BEYAZLATMA.png"
+    },
+    {
+      "id": "zirkonyum",
+      "name": { "tr": "Zirkonyum Kaplama", "en": "Zirconia Crowns" },
+      "description": {
+        "tr": "Metal desteksiz, ışığı doğal geçiren estetik kronlar.",
+        "en": "Metal-free crowns with natural light translucency."
+      },
+      "duration_days": "5-7",
+      "tags": ["metal-desteksiz", "doğal-geçirgenlik", "uzun-ömürlü"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/ZIRCONIUM-1.png"
+    },
+    {
+      "id": "laminate-veneer",
+      "name": { "tr": "Laminate Veneer", "en": "Laminate Veneer" },
+      "description": {
+        "tr": "Minimal aşındırmayla uygulanan ince porselen yaprak kaplamalar.",
+        "en": "Thin porcelain laminates applied with minimal preparation."
+      },
+      "duration_days": "5-7",
+      "tags": ["minimal-aşındırma", "ince-porselen", "estetik"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/LAMINATE-VENEER-2.png"
+    },
+    {
+      "id": "all-on-four-six",
+      "name": { "tr": "All on Four & All on Six", "en": "All on Four & All on Six" },
+      "description": {
+        "tr": "Hiç dişi olmayan çenelere 4/6 implant üzerine sabit protez; aynı gün fonksiyonel dişler.",
+        "en": "Fixed prosthesis on 4/6 implants for toothless jaws; functional teeth the same day."
+      },
+      "duration_days": "1-3",
+      "tags": ["aynı-gün-protez", "sabit-çözüm", "cerrahi-destekli"],
+      "image": "https://www.dentaliva.com/wp-content/uploads/2025/06/ALL-ON-FOUR.png"
+    }
+  ]
+}
