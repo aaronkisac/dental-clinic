@@ -2,7 +2,7 @@
 
 Shared memory for ZCode sessions on this project. ZCode keeps no memory across sessions — **this file and `docs/` are the source of truth**. Keep the phase/status table current after every checkpoint.
 
-> This file currently lives in the old `dental-clinic` prototype repo. When the new monorepo is scaffolded (Phase 4), copy it (updated) into the new repo root and treat *that* copy as canonical.
+> Canonical copy: **`aaronkisac/dentaliva`** (seeded 2026-09-24 with all planning docs). This prototype-repo copy is kept in sync during planning for session memory; Phase 4 makes `dentaliva` the only working repo.
 
 ---
 
@@ -21,7 +21,7 @@ Two goals of equal weight:
 | 0 — Tooling setup | MCP servers, CLIs, ZCode config | **Done 2026-09-24** — MCP config written (verify in Settings → MCP after ZCode restart); gh 2.101 ✓; pnpm 12.6 installed (stale `C:\Program Files\nodejs\pnpm*` shims shadow it — needs elevated `del`, non-blocking); `gh project` scope still missing — run `gh auth refresh -s project -h github.com` before Phase 3 |
 | 1 — Discovery | 14 numbered questions | **Closed 2026-09-24** — Aaron accepted all defaults ("ok you can go on"); decisions recorded below |
 | 2 — Architecture | `docs/ARCHITECTURE.md` + `docs/adr/ADR-001…007` | **Approved 2026-09-24 (Checkpoint 2)** |
-| 3 — Backlog | `docs/BACKLOG.md` — 10 epics, 46 issues | **Delivered 2026-09-24 — awaiting Checkpoint 3** (nothing created on GitHub yet) |
+| 3 — Backlog | `docs/BACKLOG.md` — 10 epics, **55 issues** | **Created on GitHub 2026-09-24** — private repo `aaronkisac/dentaliva`; Projects board pending `gh project` scope |
 | 4 — Execution | One issue → one branch → one PR | Blocked on Checkpoint 3 + explicit go |
 
 **Checkpoints (⏸) are hard stops.** Do not continue past 0/1/2/3 without Aaron's explicit reply. Do not use Goal mode / full-access mode until Phase 4 is explicitly approved. **No application code until Phase 4.**

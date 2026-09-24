@@ -132,4 +132,4 @@ Estimates: **S** ≤ ½ day · **M** ≈ 1–2 days · **L** = 3+ (split before 
 
 ---
 
-**Totals**: 10 epics · 46 issues (18 S, 26 M, 2 platform-dependent SAN-6/DEP-1) — all individually shippable, dependency-ordered. Critical path: FND → DSN → SAN → PGT → MIG/SEO/FRM → PRF/DEP → STR.
+**Totals**: 10 epics · **55 issues** (20 S, 35 M; SAN-6 and DEP-1 need platform accounts/DNS) — all individually shippable, dependency-ordered. Critical path: FND → DSN → SAN → PGT → MIG/SEO/FRM → PRF/DEP → STR.
