@@ -22,7 +22,7 @@ Two goals of equal weight:
 | 1 — Discovery | 14 numbered questions | **Closed 2026-09-24** — Aaron accepted all defaults ("ok you can go on"); decisions recorded below |
 | 2 — Architecture | `docs/ARCHITECTURE.md` + `docs/adr/ADR-001…007` | **Approved 2026-09-24 (Checkpoint 2)** |
 | 3 — Backlog | `docs/BACKLOG.md` — 10 epics, **55 issues** | **Complete 2026-09-24** — private repo `aaronkisac/dentaliva` seeded; 10 milestones, labels, issues #1–#55; **Dentaliva Delivery** board live (all 55 items, Status=Todo): https://github.com/users/aaronkisac/projects/1 |
-| 4 — Execution | One issue → one branch → one PR | Blocked on Checkpoint 3 + explicit go |
+| 4 — Execution | One issue → one branch → one PR | **In progress since 2026-09-24** — 16/55 issues Done. Local repo: `C:\Users\nezih\dev\dentaliva` (outside OneDrive). Every PR squash-merged with green CI; board statuses kept in sync. Next: SAN-4. **Blocker ahead:** SAN-6 needs Aaron's Sanity account (OAuth) |
 
 **Checkpoints (⏸) are hard stops.** Do not continue past 0/1/2/3 without Aaron's explicit reply. Do not use Goal mode / full-access mode until Phase 4 is explicitly approved. **No application code until Phase 4.**
 
