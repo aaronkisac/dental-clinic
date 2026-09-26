@@ -18,11 +18,11 @@ Two goals of equal weight:
 
 | Phase | Scope | Status |
 |---|---|---|
-| 0 — Tooling setup | MCP servers, CLIs, ZCode config | **Done 2026-09-24** — MCP config written (verify in Settings → MCP after ZCode restart); gh 2.101 ✓; pnpm 12.6 installed (stale `C:\Program Files\nodejs\pnpm*` shims shadow it — needs elevated `del`, non-blocking); `gh project` scope still missing — run `gh auth refresh -s project -h github.com` before Phase 3 |
+| 0 — Tooling setup | MCP servers, CLIs, ZCode config | **Done 2026-09-24** — MCP config written (verify in Settings → MCP after ZCode restart); gh 2.101 ✓; pnpm 12.6 installed (stale `C:\Program Files\nodejs\pnpm*` shims shadow it — needs elevated `del`, non-blocking); `gh project` scope **verified 2026-09-26** (board edits work) |
 | 1 — Discovery | 14 numbered questions | **Closed 2026-09-24** — Aaron accepted all defaults ("ok you can go on"); decisions recorded below |
 | 2 — Architecture | `docs/ARCHITECTURE.md` + `docs/adr/ADR-001…007` | **Approved 2026-09-24 (Checkpoint 2)** |
 | 3 — Backlog | `docs/BACKLOG.md` — 10 epics, **55 issues** | **Complete 2026-09-24** — private repo `aaronkisac/dentaliva` seeded; 10 milestones, labels, issues #1–#55; **Dentaliva Delivery** board live (all 55 items, Status=Todo): https://github.com/users/aaronkisac/projects/1 |
-| 4 — Execution | One issue → one branch → one PR | **In progress since 2026-09-24** — 16/55 issues Done. Local repo: `C:\Users\nezih\dev\dentaliva` (outside OneDrive). Every PR squash-merged with green CI; board statuses kept in sync. Next: SAN-4. **Blocker ahead:** SAN-6 needs Aaron's Sanity account (OAuth) |
+| 4 — Execution | One issue → one branch → one PR | **In progress since 2026-09-24** — **50/55 issues closed** (corrected 2026-09-26; this table was stale at 16 — SAN/PGT/MIG-1..4/SEO/FRM/PRF/STR/DEP-2 all landed). Local repo: `C:\Users\nezih\dev\dentaliva` (outside OneDrive). Every PR squash-merged with green CI; board statuses kept in sync. **Open (all blocked on Aaron's OAuth):** #47 DEP-1 repo-side merged #109 — live deploy needs `npx wrangler login` then `docs/runbooks/deploy.md` (staging+Access → 4 secrets → prod → custom domains/Risk #1); #49/#50/#51 need live Workers + deploy hook + `CLOUDFLARE_API_TOKEN`; #34 MIG-5 needs Sanity write auth (`sanity login` or write token; NDJSON ready in `migration/ndjson`) + client sign-off |
 
 **Checkpoints (⏸) are hard stops.** Do not continue past 0/1/2/3 without Aaron's explicit reply. Do not use Goal mode / full-access mode until Phase 4 is explicitly approved. **No application code until Phase 4.**
 
